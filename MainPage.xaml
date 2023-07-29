@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CodeQuotes.MainPage">
+
+
+    <Grid x:Name="pageBackground">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStopCollection>
+                    <GradientStop Offset="0" Color="#051937"/>
+                    <GradientStop Offset="0.25" Color="#004d7a"/>
+                    <GradientStop Offset="0.5" Color="#008794"/>
+                    <GradientStop Offset="0.75" Color="#00bf72"/>
+                    <GradientStop Offset="1" Color="#a8eb12"/>
+                </GradientStopCollection>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
+        <Grid Margin="25" RowDefinitions=".8*, .2*">
+            
+            <Label  x:Name="quotesLabel"
+                    HorizontalTextAlignment="Center"
+                    FontFamily="QuoteFont"
+                    FontSize="50"
+                    VerticalOptions="Center"
+                    Text="Deleted code is debugged code - Unknown"
+                    TextColor="AliceBlue"/>
+
+            <Button x:Name="generateQuoteButton"
+                    Grid.Row="1"
+                    BackgroundColor="Black"
+                    Opacity=".4"
+                    Text="Generate New Quote"
+                    Clicked="generateQuoteButton_Clicked"/>
+        </Grid>
+    </Grid>
+</ContentPage>
